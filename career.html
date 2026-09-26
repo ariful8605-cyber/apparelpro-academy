@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career Preparation — ApparelPro Academy</title>
+  <meta name="description" content="Garments QC, QA, GPQC, and buying-office interview preparation, plus technical English, CV, and quality terminology.">
+  <meta name="theme-color" content="#0B1C33">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="page-hero weave">
+      <div class="container">
+        <p class="kicker">Career preparation</p>
+        <h1>Become job ready</h1>
+        <p>Interview tracks for QC, QA, GPQC, and buying-office technical QC — with the English, CV, and terminology that sit behind a confident answer.</p>
+        <div class="stitch"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <img src="images/career.jpg" alt="Quality professionals in a meeting" onerror="this.style.background='#143050';this.style.minHeight='240px'">
+        </div>
+        <div>
+          <h2>Interviews reward specific answers</h2>
+          <p class="text-muted mt-4" style="line-height:1.65">Hiring managers do not want a definition of AQL. They want to know how you sampled a lot, what you did when major defects hit Re, and how you wrote the report. These modules train that behaviour.</p>
+          <p class="text-muted mt-4" style="line-height:1.65">Pair this page with a course if you are changing roles — QI to QC, QC to QA, or QA toward audit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream section">
+      <div class="container">
+        <div style="display:grid;gap:1rem" id="career-modules"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="side-panel">
+          <h2 class="text-cream" style="font-size:1.75rem">Next step</h2>
+          <p style="color:rgba(251,248,244,0.7);margin-top:0.75rem;max-width:36rem">Enroll and tell us which interview track you need. We will match you to QI, QC, QA, or Auditor training.</p>
+          <p class="mt-6" style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center">
+            <a class="btn btn-accent btn-pill" href="enroll.html">Become Job Ready →</a>
+            <a href="learn.html" style="color:rgba(251,248,244,0.8);font-size:0.875rem;font-weight:600;text-decoration:underline;text-underline-offset:4px">Revise terminology in the Knowledge Hub</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band weave">
+      <div class="container cta-inner">
+        <div>
+          <h2>Become job ready</h2>
+          <p>Submit an enrollment with your target role. We will recommend a course and an interview module.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-accent btn-pill" href="enroll.html">Become Job Ready</a>
+          <a class="btn btn-outline btn-pill" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <button type="button" class="back-top" aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  <a class="float-wa" id="float-wa" href="#" aria-label="Chat on WhatsApp" target="_blank" rel="noreferrer"><svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3.2A8.3 8.3 0 0 0 4.4 15.7L3 21l5.5-1.4A8.3 8.3 0 1 0 12 3.2zm4.8 11.8c-.2.6-1.1 1-1.5 1.1-.4 0-.8.2-2.6-.5-2.2-.9-3.6-3.1-3.7-3.3-.1-.2-1-1.3-1-2.5s.6-1.8.9-2 .5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.3 0 .5l-.3.5c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.6-.7c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.4 0 .1 0 .8-.5 1.4z"/></svg></a>
+  <script src="js/data.js"></script>
+  <script src="js/include.js"></script>
+  <script>
+    document.getElementById("career-modules").innerHTML = CAREER_MODULES.map(function (m, i) {
+      var points = m.points.map(function (p) { return "<li>" + p + "</li>"; }).join("");
+      return '<article class="card card-pad" id="' + m.id + '"><div style="display:grid;gap:1.5rem"><div><p class="kicker" style="font-size:0.7rem">Module 0' + (i + 1) + '</p><h2 class="mt-2" style="font-size:1.5rem">' + m.title + '</h2><p class="text-muted mt-3" style="font-size:0.9rem">' + m.summary + '</p></div><ul class="topic-list">' + points + '</ul></div></article>';
+    }).join("");
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
